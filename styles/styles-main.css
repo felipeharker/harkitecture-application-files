@@ -1,3 +1,18 @@
+/* INTERNAL VISUAL PROGRAMMING AIDE */
+/* programming tool, not meant for external use */
+
+/*
+
+  _______  _                    _                               ____                      _  _        
+ |__   __|| |                  | |                             |  _ \                    | |(_)       
+    | |   | |__    __ _  _ __  | | __  _   _   ___   _   _     | |_) | _ __  __ _  _   _ | | _   ___  
+    | |   | '_ \  / _` || '_ \ | |/ / | | | | / _ \ | | | |    |  _ < | '__|/ _` || | | || || | / _ \ 
+    | |   | | | || (_| || | | ||   <  | |_| || (_) || |_| | _  | |_) || |  | (_| || |_| || || || (_) |
+    |_|   |_| |_| \__,_||_| |_||_|\_\  \__, | \___/  \__,_|( ) |____/ |_|   \__,_| \__,_||_||_| \___/ 
+                                        __/ |              |/                                         
+                                       |___/                                                          
+*/
+
 header,
 .h1-nav {
     background-color: lightblue;
@@ -19,8 +34,32 @@ nav a {
     background-color: darksalmon;
 }
 
+#link-hov-1:hover {
+    color: blueviolet;
+}
+
+/* PRIMARY ELEMENTS */
+/* principle document design elements */
+
+
+/* FONTS */
+
+h1,
+h2,
+h3,
+h4,
+summary,
+nav a {
+    font-family: 'helvetica', sans-serif;
+}
+
 body {
-    font-family: 'times', sans-serif;
+    font-family: 'times', serif;
+}
+
+/* DOCUMENT */
+
+body {
     margin-left: 300px;
     margin-right: 150px;
     padding: 0;
@@ -33,24 +72,19 @@ main {
     padding: 0px 0px;
 }
 
-header {
-    text-align: center;
-}
-
-img {
-    box-sizing: border-box;
-    max-width: 100%;
-    height: auto;
-}
-
 section {
     margin-bottom: 40px;
 }
 
+header {
+    text-align: center;
+}
+
+/* TEXT */
+
 h1 {
-    font-family: 'helvetica', sans-serif;
     font-weight: 800;
-    font-size: 3em;
+    font-size: 2.5em;
     padding: 10px 25px;
     margin-bottom: 10px;
     margin-top: 0px;
@@ -59,49 +93,56 @@ h1 {
 }
 
 h2 {
-    font-family: 'helvetica', sans-serif;
     font-weight: 800;
-    font-size: 2em;
+    font-size: 1.75em;
     color: var(--color-b);
-    margin: 0px 0px;
+    margin: 0em 0em .5em 0em;
 }
 
 h3 {
-    font-family: 'helvetica', sans-serif;
     font-weight: 800;
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: var(--color-b);
-    margin: 0px;
+    margin: .5em 0em .5em 0em;
 }
 
 h4 {
-    font-family: 'helvetica', sans-serif;
     font-weight: 800;
-    font-size: 1.375em;
-    margin: 6px 0px;
+    font-size: 1em;
+    margin: .625em 0em .625em 0em;
 }
 
 p {
-    font-size: 1.25em;
-    margin: 3px 0px;
+    font-size: 1em;
+    margin: .25em 0em .25em 0em;
 }
 
 ul {
     font-size: 1em;
     margin: 0px 0px 15px;
-    line-height: 1.75em;
+    line-height: 1.75;
 }
 
 li {
     margin: 0px 0px 15px;
-    line-height: 1.75em;
+    line-height: 1.75;
 }
+
+/* IMAGES */
+
+img {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+}
+
+/* DIVIDERS */
 
 hr {
     width: auto;
     border: none;
     border-top: .5px solid;
-    margin: 3px 0px 6px;
+    margin: 0px;
 }
 
 br {
@@ -109,6 +150,8 @@ br {
     margin-top: 6px;
     margin-bottom: 6px;
 }
+
+/* LINKS */
 
 a {
     transition: color 0.3s ease;
@@ -130,12 +173,13 @@ iframe {
     overflow: hidden;
 }
 
+/* DET + SUMM */
+
 details {
     width: relative;
 }
 
 summary {
-    font-family: 'helvetica', sans-serif;
     padding: 10px 10px;
     width: 50%;
 }
@@ -143,6 +187,10 @@ summary {
 details[open] summary {
     transition: 0.5s;
 }
+
+/* NAVIGATION ELEMENTS */
+/* navbar style, see scripts > nav.js */
+
 
 nav {
     position: fixed;
@@ -154,15 +202,18 @@ nav {
     align-items: left;
 }
 
+.h1-nav {
+    text-align: left;
+}
+
 nav a {
-    font-family: 'helvetica', sans-serif;
     font-weight: medium;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 10px 20px;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1em;
     width: 100%;
     box-sizing: border-box;
     transition: 0.5s ease;
@@ -170,9 +221,8 @@ nav a {
     color: black;
 }
 
-.h1-nav {
-    text-align: left;
-}
+/* ROWS AND COLUMNS */
+/* site grid layout and organization */
 
 .row {
     display: flex;
@@ -181,35 +231,33 @@ nav a {
     padding: 0;
 }
 
-.col-25 {
-    width: 25%;
+.col-25,
+.col-35,
+.col-50,
+.col-65,
+.col-75 {
     margin: 25px 0px;
     box-sizing: border-box;
+}
+
+.col-25 {
+    width: 25%;
 }
 
 .col-35 {
     width: 35%;
-    margin: 25px 0px;
-    box-sizing: border-box;
 }
 
 .col-50 {
     width: 50%;
-    margin: 25px 0px;
-    box-sizing: border-box;
 }
 
 .col-65 {
     width: 65%;
-    margin: 25px 0px;
-    box-sizing: border-box;
 }
-
 
 .col-75 {
     width: 75%;
-    margin: 25px 0px;
-    box-sizing: border-box;
 }
 
 #c-a1 {
@@ -220,10 +268,15 @@ nav a {
     margin-left: 50px;
 }
 
-/*
-:root {
-    --color-a: white;
-    --color-b: grey;
-    --color-c: black;
+#c-b1 {
+    margin-right: 25px;
 }
-*/
+
+#c-b2 {
+    margin-left: 25px;
+}
+
+/* MOBILE-FRIENDLY ELEMENTS */
+/* css compatible with small screens */
+
+/* WIP */

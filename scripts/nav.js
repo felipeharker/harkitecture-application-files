@@ -16,7 +16,7 @@ navbarHeader.appendChild(headerText);
 // Home link
 const navHome = document.createElement('a');
 navHome.href = 'index.html'; // Link to the Home page
-navHome.textContent = 'Works';
+navHome.textContent = 'Home';
 navHome.classList.add("link-1");
 
 // About Me link
