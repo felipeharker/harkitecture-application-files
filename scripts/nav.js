@@ -16,13 +16,13 @@ navbarHeader.appendChild(headerText);
 // Home link
 const navHome = document.createElement('a');
 navHome.href = 'index.html'; // Link to the Home page
-navHome.textContent = 'Home';
+navHome.textContent = 'Works';
 navHome.classList.add("link-1");
 
 // About Me link
 const navAbout = document.createElement('a');
 navAbout.href = 'about.html'; // Link to the About Me page
-navAbout.textContent = 'About Me';
+navAbout.textContent = 'About';
 navAbout.classList.add("link-2");
 
 // Portfolio link
@@ -42,8 +42,6 @@ navAlexandria.classList.add("link-4");
 nav.appendChild(navbarHeader);
 nav.appendChild(navHome);
 nav.appendChild(navAbout);
-nav.appendChild(navPortfolio);
-nav.appendChild(navAlexandria);
 
 // Append the navbar to the body or another element
 document.body.insertBefore(nav, document.body.firstChild);
