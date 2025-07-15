@@ -17,13 +17,13 @@ navbarHeader.appendChild(headerText);
 const navHome = document.createElement('a');
 navHome.href = 'index.html'; // Link to the Home page
 navHome.textContent = 'Home';
-navHome.classList.add("link-1");
+navHome.classList.add("nav-hov-1");
 
 // About Me link
 const navAbout = document.createElement('a');
 navAbout.href = 'about.html'; // Link to the About Me page
 navAbout.textContent = 'About';
-navAbout.classList.add("link-2");
+navAbout.classList.add("nav-hov-1");
 
 // Append the navbar header and links to the navbar
 nav.appendChild(navbarHeader);
