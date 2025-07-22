@@ -1,7 +1,37 @@
+/* 1) Import your Typekit kit */
+@import url("https://use.typekit.net/tit2mav.css");
+
+/* 2) Define your variables */
+:root {
+  /* COLORS */
+  --clr-1: #ffffff;
+  --clr-2: #000000;
+  --clr-3: #808080;
+  --clr-4: #aeaeae;
+  --clr-5: #ffa500;
+
+  /* TYPESTACKS */
+  --sans-prim-2: "nimbus-sans";
+  --serif-prim-2: "warbler-display";
+  --sans-prim: "helvetica";
+  --serif-prim: "times";
+
+  /* FONT-SIZE SCALE */
+  --fs-xs: 1em;
+  --fs-s:  1.125em;
+  --fs-m:  1.25em;
+  --fs-l:  1.75em;
+  --fs-xl: 2.5em;
+
+  /* FONT-WEIGHTS */
+  --fw-light: 200;
+  --fw-medium: 400;
+  --fw-heavy: 600;
+  --fw-black: 800;
+}
+
 /* PRIMARY ELEMENTS */
 /* principle document design elements */
-
-/* FONTS */
 
 h1,
 h2,
@@ -9,258 +39,272 @@ h3,
 h4,
 summary,
 nav a {
-    font-family: 'helvetica', sans-serif;
+  font-family: var(--sans-prim), sans-serif;
 }
 
 body {
-    font-family: 'times', serif;
+  font-family: var(--serif-prim), serif;
 }
 
 /* DOCUMENT */
 
 body {
-    margin-left: 300px;
-    margin-right: 150px;
-    padding: 0;
-    line-height: 1.4;
+  margin-left: 300px;
+  margin-right: 150px;
+  padding: 0;
+  line-height: 1.4;
 }
 
 main {
-    max-width: 100%;
-    margin: 0px auto;
-    padding: 0px 0px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
 }
 
 section {
-    margin-bottom: 40px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 header {
-    text-align: center;
+  text-align: center;
 }
 
 /* TEXT */
 
 h1 {
-    font-weight: 800;
-    font-size: 2.5em;
-    padding: 10px 25px;
-    margin-bottom: 10px;
-    margin-top: 0px;
-    text-align: right;
-    text-transform: uppercase;
+  font-family:  var(--sans-prim), sans-serif;
+  font-weight:  var(--fw-heavy);
+  font-size:    var(--fs-xl);
+  padding:      10px 25px;
+  margin:       0 0 10px 0;
+  text-align:   right;
+  text-transform: uppercase;
 }
 
 h2 {
-    font-weight: 800;
-    font-size: 1.75em;
-    margin: 0em 0em .5em 0em;
+  font-family:  var(--sans-prim), sans-serif;
+  font-weight:  var(--fw-heavy);
+  font-size:    var(--fs-l);
+  margin:       .5em 0 .25em 0;
 }
 
 h3 {
-    font-weight: 800;
-    font-size: 1.5em;
-    margin: .5em 0em .5em 0em;
+  font-family:  var(--sans-prim), sans-serif;
+  font-weight:  var(--fw-black);
+  font-size:    var(--fs-m);
+  margin:       .25em 0 .25em 0;
 }
 
 h4 {
-    font-weight: 800;
-    font-size: 1.25em;
-    margin: .625em 0em .625em 0em;
+  font-family:  var(--sans-prim), sans-serif;
+  font-weight:  var(--fw-black);
+  font-size:    var(--fs-s);
+  margin:       .25em 0 .25em 0;
 }
 
 p {
-    font-size: 1.25em;
-    margin: .25em 0em .25em 0em;
+  font-family:  var(--serif-prim), serif;
+  font-size:    var(--fs-s);
+  font-weight:  var(--fw-medium);
+  margin:       .125em 0 .75em 0;
 }
 
 .sub-1 {
-    font-style: italic;
+  font-style: italic;
 }
 
 .sub-2 {
-    color: #808080;
-    font-style: italic;
+  color: var(--clr-3);   /* was #808080 */
+  font-style: italic;
 }
 
 ul {
-    font-size: 1.25em;
-    padding: 0px;
-    line-height: 1.75;
-    list-style: none;
+  font-family:  var(--serif-prim), serif;
+  font-size:    var(--fs-s);
+  line-height:  1.75;
+  padding:      0;
+  list-style:   none;
+}
+
+.ul-bull {
+  list-style-type: square;
 }
 
 li {
-    line-height: 1.75;
-    padding: 0px;
+  line-height: 1.75;
+  padding:     0;
+}
 
+/* FOOTER */
+
+footer {
+  background-color: var(--clr-4);
+  width: 100%;
+  margin: 0;
 }
 
 /* IMAGES */
 
 img {
-    box-sizing: border-box;
-    max-width: 100%;
-    height: auto;
+  box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
 }
 
+/* CARDS */
+
 .card {
-    border-radius: 2cap;
-    width: 100%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-    transition: 
-      box-shadow 0.3s ease,
-      transform   0.3s ease;
+  border-radius: 2em;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .card:hover {
-    box-shadow: 0 6px 18px orange;;
-    transform: translateY(-6px);
+  box-shadow: 0 6px 18px var(--clr-5);
+  transform: translateY(-6px);
 }
-
 
 /* DIVIDERS */
 
 hr {
-    width: auto;
-    border: none;
-    border-top: .5px solid;
-    margin: 0px;
+  width: auto;
+  border: none;
+  border-top: .5px solid var(--clr-3);
+  margin: .5em 0 .5em 0;
 }
 
 br {
-    display: block;
-    margin-top: 6px;
-    margin-bottom: 6px;
+  display: block;
+  margin: 6px 0;
 }
 
 /* LINKS */
 
 a {
-    transition: color 0.3s ease;
-    margin: 5px 0px 20px;
+  transition: color 0.3s ease;
+  margin: 5px 0 20px 0;
 }
 
 .no-ul {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 #link-hov-1:hover {
-    color: orange;
+  color: var(--clr-5);
 }
+
+/* IFRAME */
 
 iframe {
-    width: 50%;
-    height: 800px;
-    overflow: hidden;
+  width: 50%;
+  height: 800px;
+  overflow: hidden;
 }
 
-/* DET + SUMM */
+/* DETAILS / SUMMARY */
 
 details {
-    width: relative;
+  width: relative;
 }
 
 summary {
-    padding: 10px 10px;
-    width: 50%;
+  width: 100%;
+}
+
+summary:hover {
+  color: var(--clr-5);
+  transition: 0.5s ease;
 }
 
 details[open] summary {
-    transition: 0.5s;
+  color: var(--clr-5);;
+}
+
+.h2-summ {
+  font-family:  var(--sans-prim), sans-serif;
+  font-weight:  var(--fw-heavy);
+  font-size:    var(--fs-l);
+  margin:       0 0 .25em 0;
+}
+
+.p-summ {
+  font-family:  var(--sans-prim), sans-serif;
+  font-size:    var(--fs-s);
+  font-weight:  var(--fw-heavy);
+  margin:       .25em 0;
 }
 
 /* NAVIGATION ELEMENTS */
 /* navbar style, see scripts > nav.js */
 
 nav {
-    position: fixed;
-    left: 0;
-    height: 100%;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .h1-nav {
-    text-align: left;
+  text-align: left;
 }
 
 nav a {
-    font-weight: medium;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1em;
-    width: 100%;
-    box-sizing: border-box;
-    transition: 0.5s ease;
-    margin: 0px;
-    color: inherit;
+  font-weight: var(--fw-medium);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: var(--fs-xs);
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.5s ease;
+  margin: 0;
+  color: inherit;
 }
 
 .nav-hov-1:hover {
-    background-color: orange;
+  background-color: var(--clr-5);
 }
 
 /* ROWS AND COLUMNS */
 /* site grid layout and organization */
 
 .row {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: 10px;
-    padding: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 4px;
+  padding: 0;
 }
 
 .col-25,
 .col-35,
 .col-50,
 .col-65,
-.col-75 {
-    margin: 25px 0px;
-    box-sizing: border-box;
+.col-75,
+.col-100 {
+  margin: 6px 0;
+  box-sizing: border-box;
 }
 
-.col-25 {
-    width: 25%;
-}
+.col-25 { width: 25%; }
+.col-35 { width: 35%; }
+.col-50 { width: 50%; }
+.col-65 { width: 65%; }
+.col-75 { width: 75%; }
+.col-100 { width: 100%; }
 
-.col-35 {
-    width: 35%;
-}
+#c-a1 { margin-right: 50px; }
+#c-a2 { margin-left: 50px; }
+#c-b1 { margin-right: 25px; }
+#c-b2 { margin-left: 25px; }
 
-.col-50 {
-    width: 50%;
-}
-
-.col-65 {
-    width: 65%;
-}
-
-.col-75 {
-    width: 75%;
-}
-
-#c-a1 {
-    margin-right: 50px;
-}
-
-#c-a2 {
-    margin-left: 50px;
-}
-
-#c-b1 {
-    margin-right: 25px;
-}
-
-#c-b2 {
-    margin-left: 25px;
-}
 
 /* MOBILE-FRIENDLY ELEMENTS */
 /* css compatible with small screens */
@@ -295,7 +339,7 @@ nav a {
 }
 
 nav a:hover {
-  background: orange;
+  background: var(--clr-5);
   color: #fff;
 }
 
@@ -331,7 +375,7 @@ p, ul, li { font-size:1em; margin:.25em 0; }
 .sub-1 { font-style: italic; }
 .sub-2 { color: #808080; font-style: italic; }
 .no-ul { text-decoration: none; color: inherit; }
-#link-hov-1:hover { color: orange; }
+#link-hov-1:hover { color: var(--clr-5); }
 
 /* Images & cards */
 img { box-sizing: border-box; max-width:100%; height:auto; display:block; }
@@ -399,6 +443,6 @@ img {
 }
 
 #link-hov-1:hover {
-    color: orange;
+    color: var(--clr-5);
 }
 */
